@@ -31,11 +31,10 @@
   align-items: center;
   flex-wrap: wrap;
   overflow: auto;
+  transition: transform 1s;
 }
 
-button:hover {
-  background-color: #c82333;
-}
+
 
 a {
   display: inline-block;
@@ -58,7 +57,8 @@ a:hover {
   box-shadow: none !important;
 }
 
-.edit-task-form, .delete-confirmation-container {
+.edit-task-form, .delete-conformation-container {
+  transform: scale(2);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -133,15 +133,23 @@ a:hover {
 .close-button {
   border: none;
   background-color: transparent;
-  transition: transform 1s;
+  color: #372222;
 }
 
-.close-button:hover {
-  transform: scale(2);
+.close-button:hover{
+  background-color: transparent;
+  cursor: pointer;
+  
+}
+button:hover{
+  cursor: pointer;
 }
 
 .close-button-container {
-  text-align: right;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .edit-status, .edit-priority {

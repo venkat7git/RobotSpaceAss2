@@ -187,6 +187,7 @@ const Tasks = () => {
   }
 
   const deleteTask = async ()=>{
+   
     setIsDelete(false)
     try {
       const token = localStorage.getItem("token");
@@ -302,7 +303,7 @@ const Tasks = () => {
         </div>}
         {isTrigger && <form className="edit-task-form" onSubmit={onSubmitForm}>
               <div className="close-button-container">
-                <button className="close-button" onClick={()=>setTrigger(false)}><IoClose /></button>
+                <button className="close-button" onClick={()=>setTrigger(false)}><IoClose size={18}/></button>
               </div>
               <input 
                 className="edit-input"
