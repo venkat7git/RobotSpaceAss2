@@ -292,6 +292,7 @@ const Tasks = () => {
        
         
         {isDelete && <div className="delete-conformation-container">
+              <h1 className="modal-heading">Delete Task</h1>
               <p className="modal-para">Are you sure you want to delete</p>
               <div className="modal-buttons-container">
 
@@ -305,6 +306,7 @@ const Tasks = () => {
               <div className="close-button-container">
                 <button className="close-button" onClick={()=>setTrigger(false)}><IoClose size={18}/></button>
               </div>
+              <h1 className="modal-heading">Update Task</h1>
               <input 
                 className="edit-input"
                 placeholder="username"
