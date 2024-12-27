@@ -23,7 +23,7 @@ const TaskForm = () => {
           headers: { Authorization: token },
         }
       );
-      console.log(response)
+      alert("Task added Successfully")
       if (response.statusText === 'OK') {
         alert("Task created successfully!");
         // Clear form fields after success

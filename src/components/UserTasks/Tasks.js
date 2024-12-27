@@ -70,7 +70,7 @@ const Tasks = () => {
         }
       );
       
-      setTasks(response.data);
+      setTasks(response.data.reverse());
       // console.log(response.data)
       setApiStatus(statusConstants.success)
     } catch (error) {
