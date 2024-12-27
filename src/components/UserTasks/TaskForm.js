@@ -23,15 +23,15 @@ const TaskForm = () => {
           headers: { Authorization: token },
         }
       );
-      alert("Task added Successfully")
-      if (response.statusText === 'OK') {
+      
+      if (response) {
         alert("Task created successfully!");
         // Clear form fields after success
         setTitle("");
         setDescription("");
         setStatus("pending");
         setStatus("low")
-        setDueDate(new Date().toLocaleDateString('en-CA'))
+        setDueDate("")
       }
     } catch (error) {
       alert(
