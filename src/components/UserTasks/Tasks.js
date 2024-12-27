@@ -64,7 +64,7 @@ const Tasks = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:3007/tasks",
+        "https://robotspacebackend.onrender.com/tasks",
         {
           headers: { Authorization: token },
         }
@@ -124,7 +124,7 @@ const Tasks = () => {
   const token = localStorage.getItem("token");
       try{
         await axios.put(
-          `http://localhost:3007/update/status/${id}`,{Status:checkStatus},
+          `https://robotspacebackend.onrender.com/update/status/${id}`,{Status:checkStatus},
           {
             headers: { Authorization: token },
           }
@@ -152,7 +152,7 @@ const Tasks = () => {
       const token = localStorage.getItem("token");
       try{
         await axios.put(
-          `http://localhost:3007/update/task/${editingTask.id}`,editingTask,
+          `https://robotspacebackend.onrender.com/update/task/${editingTask.id}`,editingTask,
           {
             headers: { Authorization: token },
           }
@@ -191,7 +191,7 @@ const Tasks = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:3007/tasks/delete/${taskId}`,
+        `https://robotspacebackend.onrender.com/tasks/delete/${taskId}`,
         {
           headers: { Authorization: token },
         }
@@ -218,7 +218,7 @@ const Tasks = () => {
         const token = localStorage.getItem("token");
         try{
           const response = await axios.get(
-            `http://localhost:3007/tasks/search/${searchInput}`,
+            `https://robotspacebackend.onrender.com/tasks/search/${searchInput}`,
             {
               headers: { Authorization: token },
             }
@@ -244,7 +244,7 @@ const Tasks = () => {
         try {
           const token = localStorage.getItem("token");
           const response = await axios.get(
-            `http://localhost:3007/tasks/filter/${Status}`,
+            `https://robotspacebackend.onrender.com/tasks/filter/${Status}`,
             {
               headers: { Authorization: token },
             }

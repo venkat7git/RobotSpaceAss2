@@ -12,7 +12,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3007/signup", {
+      await axios.post("https://robotspacebackend.onrender.com/signup", {
         username,
         email,
         password,
